@@ -18,6 +18,14 @@ import com.challenge.qchallenge_mobile.R
 import kotlinx.coroutines.delay
 
 @Composable
+fun Logo( modifier: Modifier = Modifier.scale(1f)){
+    Image(painter = painterResource(id = R.drawable.qchallenge_logo),
+        contentDescription = "Splash logo",
+        modifier = modifier
+    )
+}
+
+@Composable
 fun SplashScreen(navController: NavController){
     val scale = remember{
         Animatable(0f)
@@ -38,9 +46,10 @@ fun SplashScreen(navController: NavController){
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxSize()
     ) {
-        Image(painter = painterResource(id = R.drawable.qchallenge_logo),
-            contentDescription = "Splash logo",
-            modifier = Modifier.scale(scale.value)
-        )
+        Logo(modifier = Modifier.scale(scale.value))
+//        Image(painter = painterResource(id = R.drawable.qchallenge_logo),
+//            contentDescription = "Splash logo",
+//            modifier = Modifier.scale(scale.value)
+//        )
     }
 }

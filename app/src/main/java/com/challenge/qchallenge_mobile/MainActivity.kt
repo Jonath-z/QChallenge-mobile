@@ -22,7 +22,7 @@ import com.challenge.qchallenge_mobile.screens.SplashScreen
 import com.challenge.qchallenge_mobile.ui.buttons.PrimaryFilledButton
 import com.challenge.qchallenge_mobile.ui.buttons.PrimaryNoFilledButton
 import com.challenge.qchallenge_mobile.ui.theme.PrimaryDark
-import com.challenge.qchallenge_mobile.ui.theme.PrimaryYello
+import com.challenge.qchallenge_mobile.ui.theme.PrimaryYellow
 import com.challenge.qchallenge_mobile.ui.theme.QChallengemobileTheme
 
 class MainActivity : ComponentActivity() {
@@ -52,8 +52,12 @@ fun Navigation(){
         composable("auth_screen"){
             Authentication()
         }
+
         composable("main_screen"){
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
+            Box(modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            )
+            {
                 Text(text = "main screen", color = Color.White)
                 Column() {
                     PrimaryFilledButton(
@@ -64,7 +68,7 @@ fun Navigation(){
                             .height(50.dp)
                             .border(
                                 width = 1.dp,
-                                color = PrimaryYello,
+                                color = PrimaryYellow,
                                 shape = RoundedCornerShape(60.dp)
                             ))
                     PrimaryNoFilledButton(
@@ -75,7 +79,7 @@ fun Navigation(){
                             .height(50.dp)
                             .border(
                                 width = 1.dp,
-                                color = PrimaryYello,
+                                color = PrimaryYellow,
                                 shape = RoundedCornerShape(10.dp)
                             ))
                 }

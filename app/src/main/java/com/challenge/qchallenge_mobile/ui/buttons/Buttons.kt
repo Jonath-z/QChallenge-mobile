@@ -6,14 +6,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
-import com.challenge.qchallenge_mobile.ui.theme.PrimaryYello
+import com.challenge.qchallenge_mobile.ui.theme.PrimaryYellow
 import com.challenge.qchallenge_mobile.ui.theme.SecondaryDark
 
 @Composable
 fun PrimaryFilledButton(text: String, onClick: OnClickListener, modifier: Modifier){
     Button(
         onClick = { onClick },
-        colors = ButtonDefaults.buttonColors(PrimaryYello),
+        colors = ButtonDefaults.buttonColors(PrimaryYellow),
         modifier = modifier
     ) {
         Text(
